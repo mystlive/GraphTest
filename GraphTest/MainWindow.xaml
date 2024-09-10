@@ -1,0 +1,19 @@
+﻿<Window x:Class="GraphTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Graph Test" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+            <StatusBar DockPanel.Dock="Bottom">
+                <StatusBarItem Content="{Binding DrawTime}" x:Name="StatusBarDrawTime" />
+            </StatusBar>
+            <StackPanel>
+                <Button Content="Show WPF Graph" Click="ShowWpfGraph_Click"/>
+                <Button Content="Show OxyPlot Graph" Click="ShowOxyPlotGraph_Click"/>
+                <Button Content="Show GDI+ Graph" Click="ShowGdiGraph_Click"/>
+                <Button Content="Show ScottPlot Graph" Click="ShowScottPlotGraph_Click"/>
+                <ContentControl x:Name="GraphContainer" Height="200"  Margin="10"/>
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Window>
